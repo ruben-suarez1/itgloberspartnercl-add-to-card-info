@@ -8,6 +8,10 @@ import styles from './styles.css'
 const AddToCartInfo = ({ blockClass }: { blockClass: string}) => {
   const container = generateBlockClass(styles.container, blockClass)
   const container__item = generateBlockClass(styles.container__item, blockClass)
+  const container__item__cart = generateBlockClass(styles.container__item__cart, blockClass)
+  const item__image =  generateBlockClass(styles.item__image, blockClass)
+  const item__text =  generateBlockClass(styles.item__text, blockClass)
+  const item__number =  generateBlockClass(styles.item__number, blockClass)
   const productInfo = useProduct()
   const { orderForm: {
     items,
@@ -22,23 +26,23 @@ const AddToCartInfo = ({ blockClass }: { blockClass: string}) => {
         items.map((item: any, index: number) => {
           return (
             <div key={index} className={container__item}>
-              <div>
-                <img src={item.imageUrls.at1x} alt="imagen" />
+              <div className={container__item__cart}>
+                <img src={item.imageUrls.at1x} alt="imagen" className={item__image}/>
               </div>
               <div>
-                <p>{item.name}</p>
-                <p>{item.id}</p>
-                <p>${item.price / 100}</p>
-                <p>Cant: {item.quantity}</p>
-                <p>SubTotal: $ {(item.price / 100) * (item.quantity)}</p>
+                <p className={item__text}>{item.name}</p>
+                <p className={item__text}>{item.id}</p>
+                <p className={item__number}>${item.price / 100}</p>
+                <p className={item__number}>Cant: {item.quantity}</p>
+                <p className={item__number}>SubTotal: $ {(item.price / 100) * (item.quantity)}</p>
               </div>
             </div>
           )
         })
       }
-      <div>
-        <p>Tenemos {items.length} items en tu compra</p>
-        <p>Total: ${totalizers[0]?.value / 100}</p>
+      <div className={container__item__cart}>
+        <p className={item__number}>Tenemos {items.length} items en tu compra</p>
+        <p className={item__number}>Total: ${totalizers[0]?.value / 100}</p>
       </div>
       <ButtonGroup />
     </div>
