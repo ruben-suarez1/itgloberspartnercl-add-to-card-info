@@ -36,7 +36,7 @@ const AddToCartInfo = ({ blockClass }: { blockClass: string}) => {
           )
         })
       }
-      <div>
+      <div className={container__item}>
         <p>Tenemos {items.length} items en tu compra</p>
         <p>Total: ${totalizers[0]?.value / 100}</p>
       </div>
