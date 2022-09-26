@@ -3,5 +3,29 @@
 }
 
 .container__item {
-  margin-bottom: 10px;
+  background: #e8e8e8;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+
+.container__total {
+  padding-left: 1rem;
+}
+
+.container__button {
+  padding: 0 1rem;
+}
+
+.department__button {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: #DD0021;
+  border-radius: 0.2rem;
+}
+
+.text {
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
 }

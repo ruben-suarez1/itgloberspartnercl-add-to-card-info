@@ -8,6 +8,8 @@ import styles from './styles.css'
 const AddToCartInfo = ({ blockClass }: { blockClass: string}) => {
   const container = generateBlockClass(styles.container, blockClass)
   const container__item = generateBlockClass(styles.container__item, blockClass)
+  const container__total = generateBlockClass(styles.container__total, blockClass)
+  const container__button = generateBlockClass(styles.container__button, blockClass)
   const productInfo = useProduct()
   const { orderForm: {
     items,
@@ -36,11 +38,13 @@ const AddToCartInfo = ({ blockClass }: { blockClass: string}) => {
           )
         })
       }
-      <div className={container__item}>
+      <div className={container__total}>
         <p>Tenemos {items.length} items en tu compra</p>
         <p>Total: ${totalizers[0]?.value / 100}</p>
       </div>
-      <ButtonGroup />
+      <div className={container__button}>
+        <ButtonGroup />
+      </div>
     </div>
   )
 }
