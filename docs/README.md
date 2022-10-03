@@ -2,6 +2,8 @@
 
 Componente mostrará información adicional al momento de añadir un producto a la lista del carrito
 
+![add-to-cart-info](https://user-images.githubusercontent.com/84733911/193507312-5b8f6ba1-21fe-404d-9ecc-58aecae7d344.png)
+
 ## Configuración
 ### Paso 1 - Configuración básica
 
